@@ -1,0 +1,77 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f4f8; /* Soft light background */
+    color: #333; /* Dark text color for readability */
+}
+
+header {
+    background-color: #ff6f61; /* Soft Blue */
+    color: #ffffff; /* White text color */
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+header img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+}
+
+h1 {
+    margin-top: 0;
+    font-size: 2.5em; /* Larger heading */
+}
+
+h2, h3 {
+    color: #ff6f61; /* Coral for headings */
+}
+
+section {
+    padding: 20px;
+    margin: 10px;
+    border-radius: 8px;
+    background-color: lightpink; /* White for sections */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.skills-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.skill {
+    background-color: #f7c6c7; /* Soft Pink */
+    padding: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+}
+
+.skill:hover {
+    background-color: #f05a28; /* Darker Pink on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #333; /* Dark background for footer */
+    color: #ffffff; /* White text color */
+}
+
+a {
+    color: #6a9bd1; /* Soft Blue for links */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #ff6f61; /* Coral on hover */
+}

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Lisa Ndlovu - Software Developer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function toggleDescription(id) {
+            const description = document.getElementById(id);
+            description.style.display = description.style.display === 'none' ? 'block' : 'none';
+        }
+        
+        function toggleResume() {
+            const resumeDisplay = document.getElementById('resume-display');
+            resumeDisplay.style.display = resumeDisplay.style.display === 'none' ? 'block' : 'none';
+        }
+
+        function openProfileModal(imageSrc) {
+            const modalImage = document.getElementById('modal-image');
+            modalImage.src = imageSrc; // Set the modal image source
+            document.getElementById('profile-modal').style.display = 'block';
+        }
+
+        function closeProfileModal() {
+            document.getElementById('profile-modal').style.display = 'none';
+        }
+
+        // Close modal when clicking outside of it
+        window.onclick = function(event) {
+            const modal = document.getElementById('profile-modal');
+            if (event.target === modal) {
+                closeProfileModal();
+            }
+        }
+    </script>
+</head>
+<body>
+
+<header>
+    <img src="C:/Users/lisan/OneDrive/Documents/Snapchat-1530088608.jpg" alt="Profile Picture" style="width: 100px; height: 100px; border-radius: 50%; float: left; margin-right: 20px; cursor: pointer;" onclick="openProfileModal('C:/Users/lisan/OneDrive/Documents/Snapchat-1530088608.jpg')"/>
+    <h1>Lisa Ndlovu - Software Developer</h1>
+    <p>Welcome! I am Lisa Ndlovu, passionate about software development. Ready to take on new challenges and grow my professional skills in dynamic environments.</p>
+</header>
+
+<section id="about">
+    <h2>About Me</h2>
+    <p>I am excited to share my journey in technology and software development, aiming to create impactful solutions.</p>
+</section>
+
+<section id="skills">
+    <h2>Technical Skills & Certifications</h2>
+    <div class="skills-list">
+        <div class="skill" onclick="toggleDescription('software-development')">
+            <h3>Introduction to Software Development</h3>
+            <p id="software-development" style="display: none;">Foundational principles of software development and programming concepts.</p>
+        </div>
+        <div class="skill" onclick="toggleDescription('web-development')">
+            <h3>Introduction to Web Development</h3>
+            <p id="web-development" style="display: none;">Learned HTML, CSS, and JavaScript for building interactive web applications.</p>
+        </div>
+        <div class="skill" onclick="toggleDescription('react-basics')">
+            <h3>React Basics</h3>
+            <p id="react-basics" style="display: none;">Understanding core concepts of React for building user interfaces.</p>
+        </div>
+        <div class="skill" onclick="toggleDescription('databases')">
+            <h3>Introduction to Databases for Back-End Development</h3>
+            <p id="databases" style="display: none;">Basic knowledge of database management and back-end integration.</p>
+        </div>
+        <div class="skill" onclick="toggleDescription('data-capturing')">
+            <h3>Data Capturing</h3>
+            <p id="data-capturing" style="display: none;">Expertise in data capture techniques for accurate data collection and analysis.</p>
+        </div>
+        <div class="skill" onclick="toggleDescription('icdl')">
+            <h3>ICDL Certification</h3>
+            <p id="icdl" style="display: none;">Certified in Information Technology to enhance digital skills and efficiency.</p>
+        </div>
+    </div>
+</section>
+
+<section id="projects">
+    <h2>Projects</h2>
+    <ul>
+        <li>
+            <h3>Portfolio Creation</h3>
+            <p>Developed this personal portfolio website to showcase my skills and projects in software development.</p>
+        </li>
+        <li>
+            <h3>Car Selling Website</h3>
+            <p>Created a web application for selling cars, featuring user authentication, car listings, and a responsive design.</p>
+        </li>
+    </ul>
+</section>
+
+<section id="philosophy">
+    <h2>My Philosophy & Aspirations</h2>
+    <p>I continuously seek to enhance my education and skill development to stay relevant and effective in the tech industry.</p>
+    <p>Empowering through innovative solutions to drive impactful change.</p>
+    <p>Professional growth aligns with my commitment to broaden my impact in various projects.</p>
+</section>
+
+<section id="contact">
+    <h2>Contact Me</h2>
+    <div class="profile-picture" style="cursor: pointer;" onclick="openProfileModal('C:/Users/lisan/OneDrive/Documents/shared image.jfif')">
+        <img src="C:/Users/lisan/OneDrive/Documents/shared image.jfif" alt="Profile Picture" style="width: 150px; height: 150px; border-radius: 50%;" />
+    </div>
+    <p>Email: <a href="mailto:lisandlovu08@gmail.com">lisandlovu08@gmail.com</a></p>
+    <p>Phone: +27 636144776</p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/lisa-ndlovu-270807222/">linkedin.com/in/lisa-ndlovu-270807222</a></p>
+    <p>Resume: <button onclick="toggleResume()">View Resume</button></p>
+    <div id="resume-display" style="display: none;">
+        <img src="C:/Users/lisan/OneDrive/Pictures/Screenshots/Screenshot 2025-05-04 155259.png" alt="Resume Preview" style="width: 100%; max-width: 600px;"/>
+        <p><a href="C:/Users/lisan/OneDrive/Pictures/your-resume.pdf" download>Download Resume</a></p>
+    </div>
+</section>
+
+<section id="goals">
+    <h2>Professional Goals & Career Vision</h2>
+    <ul>
+        <li>Master Web Development: Develop skills in creating responsive and dynamic web applications.</li>
+        <li>Expand Technical Skills: Acquire advanced knowledge in software development frameworks and tools.</li>
+        <li>Contribute to Impactful Projects: Engage in initiatives that leverage technology for social good.</li>
+    </ul>
+</section>
+
+<section id="collaboration">
+    <h2>Why Collaborate with Me?</h2>
+    <ul>
+        <li>Dependable: Consistently delivers accurate and timely results.</li>
+        <li>Problem Solver: Skilled in analyzing challenges and providing effective solutions.</li>
+        <li>Eager Learner: Continuously improves skills to adapt and stay relevant.</li>
+        <li>Team Player: Works collaboratively to achieve shared goals.</li>
+    </ul>
+</section>
+
+<!-- Profile Modal -->
+<div id="profile-modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.7); z-index: 1000;">
+    <div style="position: relative; margin: auto; top: 50%; transform: translateY(-50%); width: 80%; max-width: 500px; background-color: #fff; padding: 20px; border-radius: 10px;">
+        <h2 style="text-align: center;">Profile Picture</h2>
+        <img id="modal-image" src="" alt="Profile Picture" style="width: 100%; border-radius: 10px; display: block; margin: auto;" />
+    </div>
+</div>
+
+<footer>
+    <div>
+        <a href="https://github.com/your-github-username" target="_blank">
+            <img src="https://img.icons8.com/ios-filled/50/ffffff/github.png" alt="GitHub" />
+        </a>
+        <a href="https://www.linkedin.com/in/lisa-ndlovu-270807222/" target="_blank">
+            <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="LinkedIn" />
+        </a>
+        <a href="mailto:lisandlovu08@gmail.com">
+            <img src="https://img.icons8.com/ios-filled/50/ffffff/email.png" alt="Email" />
+        </a>
+    </div>
+    <p>© 2023 Lisa Ndlovu</p>
+</footer>
+
+</body>
+</html>
