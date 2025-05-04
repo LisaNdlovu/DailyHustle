@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <title>Lisa Ndlovu - Software Developer</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
@@ -11,11 +10,6 @@
         function toggleDescription(id) {
             const description = document.getElementById(id);
             description.style.display = description.style.display === 'none' ? 'block' : 'none';
-        }
-        
-        function toggleResume() {
-            const resumeDisplay = document.getElementById('resume-display');
-            resumeDisplay.style.display = resumeDisplay.style.display === 'none' ? 'block' : 'none';
         }
 
         function openProfileModal(imageSrc) {
@@ -40,8 +34,7 @@
 <body>
 
 <header>
-    <div class="profile-picture" style="cursor: pointer;" onclick="openProfileModal('https://github.com/LisaNdlovu/DailyHustle/blob/main/Snapchat-1530088608.jpg)">
-    <img src="https://github.com/LisaNdlovu/DailyHustle/blob/main/Snapchat-1530088608.jpg?raw=true" alt="Profile Picture" style="width: 100px; height: 100px; border-radius: 50%; float: left; margin-right: 20px; cursor: pointer;" onclick="openProfileModal('C:/Users/lisan/OneDrive/Documents/Snapchat-1530088608.jpg')"/>
+    <img src="https://raw.githubusercontent.com/LisaNdlovu/DailyHustle/main/Snapchat-1530088608.jpg" alt="Profile Picture" style="width: 100px; height: 100px; border-radius: 50%; float: left; margin-right: 20px; cursor: pointer;" onclick="openProfileModal('https://raw.githubusercontent.com/LisaNdlovu/DailyHustle/main/Snapchat-1530088608.jpg')"/>
     <h1>Lisa Ndlovu - Software Developer</h1>
     <p>Welcome! I am Lisa Ndlovu, passionate about software development. Ready to take on new challenges and grow my professional skills in dynamic environments.</p>
 </header>
@@ -104,17 +97,12 @@
 
 <section id="contact">
     <h2>Contact Me</h2>
-    <div class="profile-picture" style="cursor: pointer;" onclick="openProfileModal('https://raw.githubusercontent.com/LisaNdlovu/Profile-Portfolio/refs/heads/main/shared%20image.jfif')">
-        <img src="https://raw.githubusercontent.com/LisaNdlovu/DailyHustle/refs/heads/main/shared%20image.jfif" alt="Profile Picture" style="width: 150px; height: 150px; border-radius: 50%;" />
+    <div class="profile-picture" style="cursor: pointer;" onclick="openProfileModal('https://raw.githubusercontent.com/LisaNdlovu/DailyHustle/main/shared%20image.jfif')">
+        <img src="https://raw.githubusercontent.com/LisaNdlovu/DailyHustle/main/shared%20image.jfif" alt="Profile Picture" style="width: 150px; height: 150px; border-radius: 50%;" />
     </div>
     <p>Email: <a href="mailto:lisandlovu08@gmail.com">lisandlovu08@gmail.com</a></p>
     <p>Phone: +27 636144776</p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/lisa-ndlovu-270807222/">linkedin.com/in/lisa-ndlovu-270807222</a></p>
-    <p>Resume: <button onclick="toggleResume()">View Resume</button></p>
-    <div id="resume-display" style="display: none;">
-        <img src="https://github.com/LisaNdlovu/Profile-Portfolio/blob/main/Screenshot%202025-05-04%20155259.png" alt="Resume Preview" style="width: 100%; max-width: 600px;"/>
-        <p><a href="https://github.com/LisaNdlovu/Profile-Portfolio/blob/main/Lisa%20Ndlovu.pdf" download>Download Resume</a></p>
-    </div>
+    <p>Resume: <button onclick="openProfileModal('https://raw.githubusercontent.com/LisaNdlovu/DailyHustle/main/your-resume-image.png')">View Resume</button></p>
 </section>
 
 <section id="goals">
@@ -128,36 +116,14 @@
 
 <section id="collaboration">
     <h2>Why Collaborate with Me?</h2>
-    <ul>
-        <li>Dependable: Consistently delivers accurate and timely results.</li>
-        <li>Problem Solver: Skilled in analyzing challenges and providing effective solutions.</li>
-        <li>Eager Learner: Continuously improves skills to adapt and stay relevant.</li>
-        <li>Team Player: Works collaboratively to achieve shared goals.</li>
-    </ul>
+    <p>Collaboration fosters innovation. I believe in the power of teamwork to achieve great results.</p>
 </section>
 
-<!-- Profile Modal -->
-<div id="profile-modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.7); z-index: 1000;">
-    <div style="position: relative; margin: auto; top: 50%; transform: translateY(-50%); width: 80%; max-width: 500px; background-color: #fff; padding: 20px; border-radius: 10px;">
-        <h2 style="text-align: center;">Profile Picture</h2>
-        <img id="modal-image" src="" alt="Profile Picture" style="width: 100%; border-radius: 10px; display: block; margin: auto;" />
-    </div>
+<!-- Modal Structure -->
+<div id="profile-modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background-color:rgba(0, 0, 0, 0.8); z-index:1000;">
+    <span onclick="closeProfileModal()" style="color:white; cursor:pointer; position:absolute; top:10px; right:20px;">&times;</span>
+    <img id="modal-image" style="margin:auto; display:block; max-width:90%; max-height:90%; position:absolute; top:50%; left:50%; transform:translate(-50%, -50%);"/>
 </div>
-
-<footer>
-    <div>
-        <a href="https://github.com/your-github-username" target="_blank">
-            <img src="https://img.icons8.com/ios-filled/50/ffffff/github.png" alt="GitHub" />
-        </a>
-        <a href="https://www.linkedin.com/in/lisa-ndlovu-270807222/" target="_blank">
-            <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="LinkedIn" />
-        </a>
-        <a href="mailto:lisandlovu08@gmail.com">
-            <img src="https://img.icons8.com/ios-filled/50/ffffff/email.png" alt="Email" />
-        </a>
-    </div>
-    <p>© 2023 Lisa Ndlovu</p>
-</footer>
 
 </body>
 </html>
