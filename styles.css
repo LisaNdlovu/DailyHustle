@@ -1,17 +1,21 @@
+/* Basic Reset and Body Styling */
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
+    line-height: 1.6; /* Added line-height for better readability */
     background-color: #f0f4f8; /* Soft light background */
     color: #333; /* Dark text color for readability */
 }
 
+/* Header Styling */
 header {
     background-color: #ff6f61; /* Coral */
     color: #ffffff; /* White text color */
     padding: 20px;
     text-align: center;
-    position: relative;
+    position: relative; /* Needed for absolute positioning of the image */
+    padding-top: 120px; /* Add padding to make space for the absolute positioned image */
 }
 
 header img {
@@ -21,32 +25,51 @@ header img {
     position: absolute;
     left: 20px;
     top: 20px;
+    cursor: pointer; /* Add cursor style to indicate it's clickable */
 }
 
-h1 {
+header h1 {
     margin-top: 0;
     font-size: 2.5em; /* Larger heading */
+    margin-bottom: 10px; /* Add some space below the main heading */
 }
 
+header p {
+    font-size: 1.1em;
+    color: #ffffff; /* Ensure header text is white */
+    max-width: 800px; /* Limit paragraph width for readability */
+    margin: 0 auto; /* Center the paragraph */
+}
+
+
+/* Headings */
 h5 {
-    font-size: 1.8em; /* Heading */
-    color: #ff6f61;
+    font-size: 1.8em; /* Section Heading */
+    color: #ff6f61; /* Coral */
+    margin-bottom: 15px; /* Space below section headings */
+    border-bottom: 2px solid #ff6f61; /* Coral underline */
+    padding-bottom: 5px;
+    display: inline-block; /* Make the underline only as wide as the text */
 }
 
 h6 {
-    font-size: 1em; /* Description */
-    color: #333;
+    font-size: 1.1em; /* Skill/Project Title */
+    color: #333; /* Dark text */
+    margin-top: 0;
+    margin-bottom: 5px; /* Space below smaller headings */
 }
 
+/* Navigation Bar */
 nav {
     background-color: #333; /* Dark background for nav */
-    padding: 10px;
+    padding: 10px 0; /* Add padding to the top and bottom */
     text-align: center;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
+    margin: 0; /* Remove default margin */
 }
 
 nav ul li {
@@ -57,6 +80,8 @@ nav ul li {
 nav a {
     color: #ffffff; /* White text */
     text-decoration: none;
+    font-weight: bold; /* Make nav links bold */
+    transition: color 0.3s ease; /* Smooth color transition on hover */
 }
 
 nav a:hover {
@@ -64,41 +89,166 @@ nav a:hover {
     color: #ff6f61; /* Coral on hover */
 }
 
+/* Section Styling */
 section {
     border-radius: 10px;
     padding: 20px;
     background-color: #ffffff; /* White background for sections */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    margin-top: 20px; /* Space between sections */
+    margin: 20px auto; /* Center sections and add space above/below */
+    max-width: 900px; /* Limit section width */
 }
 
-/* Form styles */
-form {
+/* About Section */
+#about p {
+    font-size: 1.1em;
+    color: #555; /* Slightly lighter text */
+}
+
+
+/* Skills Section */
+.skills-list {
+    display: flex;
+    flex-wrap: wrap; /* Allow skills to wrap */
+    gap: 15px; /* Space between skill boxes */
+    justify-content: center; /* Center skills horizontally */
+}
+
+.skill {
+    background-color: #e9ecef; /* Light background for skill boxes */
+    padding: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    flex: 1 1 250px; /* Flex properties for responsive layout */
+    max-width: 300px; /* Max width for a skill box */
+}
+
+.skill:hover {
+    background-color: #dee2e6; /* Darker on hover */
+}
+
+.skill p {
+    font-size: 0.9em;
+    color: #666; /* Lighter text for description */
+    margin-top: 10px; /* Space above description */
+}
+
+/* Projects Section */
+#projects ul {
+    list-style: none;
+    padding: 0;
+}
+
+#projects li {
+    margin-bottom: 20px;
+    border-bottom: 1px dashed #ccc; /* Subtle separator */
+    padding-bottom: 15px;
+}
+
+#projects p {
+    color: #555;
+}
+
+/* Philosophy Section */
+#philosophy p {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+/* Contact Section (Acting as Footer) */
+#contact {
+    background-color: #333; /* Dark background for the footer/contact section */
+    color: #ffffff; /* White text color for contrast */
+    text-align: center; /* Center all inline and inline-block content */
+    padding: 20px; /* Add some padding */
+    border-radius: 0; /* Remove border-radius for a full-width footer look */
+    box-shadow: none; /* Remove box-shadow for a cleaner footer look */
+    margin: 40px 0 0 0; /* Remove margins and add space above */
+    max-width: none; /* Allow the contact section to take full width */
+}
+
+#contact h5 {
+    color: #ffffff; /* Ensure contact heading is white */
+    border-bottom-color: #ffffff; /* White underline for contact heading */
+}
+
+#contact h6 {
+    color: #ffffff; /* Ensure contact details are white */
+    margin-bottom: 10px;
+}
+
+#contact .profile-picture img {
+    width: 150px; /* Set size from HTML inline style */
+    height: 150px; /* Set size from HTML inline style */
+    border-radius: 50%; /* Set radius from HTML inline style */
+    cursor: pointer; /* Add cursor style */
+    margin-bottom: 15px; /* Space below the contact profile picture */
+}
+
+
+#contact a {
+    color: #6a9bd1; /* Soft Blue for links */
+    text-decoration: none;
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+#contact a:hover {
+    text-decoration: underline;
+    color: #ff6f61; /* Coral on hover */
+}
+
+/* Form styles within the contact section */
+#contact form {
     display: flex;
     flex-direction: column;
     margin-top: 20px;
     max-width: 600px; /* Max width for the form */
     margin-left: auto;
-    margin-right: auto;
+    margin-right: auto; /* Center the form block */
 }
 
-input, textarea {
+#contact form input[type="text"],
+#contact form input[type="email"],
+#contact form textarea {
     padding: 10px;
     margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 5px;
     width: 100%; /* Full width */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
 
-button {
-    background-color: #ff6f61; /* Coral */
+#contact form button[type="submit"] {
+    background-color: #ff6f61; /* Coral for submit button */
     color: white;
     border: none;
     padding: 10px;
     border-radius: 5px;
     cursor: pointer;
     font-size: 1em;
-    transition: box-shadow 0.3s; /* Add transition for shine effect */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Add transition for shine effect */
+}
+
+#contact form button[type="submit"]:hover {
+    background-color: #f05a28; /* Darker Coral on hover */
+    box-shadow: 0 0 20px rgba(240, 111, 97, 0.7); /* Shine effect */
+}
+
+
+/* General Button Styling (if not within contact section form) */
+/* Since you have a button for the resume outside the contact form,
+   let's make sure it's styled similarly */
+button {
+    background-color: #ff6f61; /* Coral */
+    color: white;
+    border: none;
+    padding: 10px 15px; /* Add some horizontal padding */
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Add transition for shine effect */
 }
 
 button:hover {
@@ -106,19 +256,111 @@ button:hover {
     box-shadow: 0 0 20px rgba(240, 111, 97, 0.7); /* Shine effect */
 }
 
-footer {
-    text-align: center;
-    padding: 8px;
-    background-color: #333; /* Dark background for footer */
-    color: #ffffff; /* White text color */
+
+/* Modal Styling (from previous example, ensure it's included) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.7); /* Black background with opacity */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    /* Use flexbox for centering if you update your JS to display: 'flex' */
+    /* If you keep display: 'block', centering will rely on margin: auto for the modal-content */
 }
 
+.modal-content {
+    margin: auto; /* Center the modal content block */
+    display: block; /* Ensure it's a block element for margin: auto to work */
+    max-width: 80%;
+    max-height: 80%;
+    border-radius: 8px;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* General Link Styling (if not within nav or contact section) */
 a {
     color: #6a9bd1; /* Soft Blue for links */
     text-decoration: none;
+    transition: color 0.3s ease; /* Smooth color transition */
 }
 
 a:hover {
     text-decoration: underline;
     color: #ff6f61; /* Coral on hover */
+}
+
+/* Add some basic responsiveness */
+@media (max-width: 768px) {
+    nav ul li {
+        margin: 0 10px;
+    }
+
+    header {
+        padding: 30px 15px;
+        padding-top: 120px; /* Adjust padding for the absolute image */
+    }
+
+    header img {
+         left: 10px; /* Adjust image position on smaller screens */
+         top: 10px;
+         width: 80px;
+         height: 80px;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    section {
+        padding: 30px 15px;
+    }
+
+    section h5 {
+        font-size: 1.5em;
+    }
+
+    .skills-list {
+        flex-direction: column; /* Stack skills vertically on smaller screens */
+        align-items: center; /* Center stacked skills */
+    }
+
+    .skill {
+        flex: 1 1 100%; /* Make skills take full width */
+        max-width: 400px; /* Still set a max-width */
+    }
+
+    #contact form {
+        max-width: 100%; /* Allow form to take full width */
+    }
+
+    /* Ensure the footer rule in the media query is correct if you add a footer */
+    /* footer {
+        text-align: center;
+        padding: 8px;
+        background-color: #333;
+        color: #ffffff;
+    } */
 }
