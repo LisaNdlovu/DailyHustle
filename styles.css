@@ -1,3 +1,4 @@
+
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -70,6 +71,12 @@ section {
     background-color: lightpink; /*  background for sections */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     margin-top: 20px; /* Space between sections */
+}
+.get-in-touch {
+    background-color: #f7c6c7; /* Light Pink */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 /* Form styles */
