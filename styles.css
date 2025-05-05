@@ -310,4 +310,9 @@ section h5 {
     #contact form {
         max-width: 100%; /* Allow form to take full width */
     }
+    footer {
+    text-align: center;
+    padding: 8px
+    background-color: #333; /* Dark background for footer */
+    color: #ffffff; /* White text color */
 }
