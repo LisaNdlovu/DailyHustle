@@ -106,7 +106,15 @@ section {
 }
 
 
-/* Skills Section */
+/* Skills Section Specific Styling */
+.skills-box {
+    background-color: #e9ecef; /* Light background for the skills box */
+    border-radius: 8px; /* Rounded corners for the box */
+    padding: 20px; /* Padding inside the box */
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); /* Subtle inner shadow */
+    margin-top: 15px; /* Space between the heading and the box */
+}
+
 .skills-list {
     display: flex;
     flex-wrap: wrap; /* Allow skills to wrap */
@@ -115,17 +123,25 @@ section {
 }
 
 .skill {
-    background-color: #e9ecef; /* Light background for skill boxes */
+    background-color: #ffffff; /* White background for individual skill boxes */
     padding: 15px;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Added transform transition */
     flex: 1 1 250px; /* Flex properties for responsive layout */
     max-width: 300px; /* Max width for a skill box */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for individual skills */
 }
 
 .skill:hover {
-    background-color: #dee2e6; /* Darker on hover */
+    background-color: #f8f9fa; /* Very light grey on hover */
+    transform: translateY(-3px); /* Lift the skill box slightly on hover */
+}
+
+.skill h6 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #333; /* Dark text */
 }
 
 .skill p {
@@ -157,21 +173,21 @@ section {
     margin-bottom: 15px;
 }
 
-/* Contact Section (Acting as Footer) */
+/* Contact Section (Styled to look like a Footer) */
 #contact {
-    background-color: #333; /* Dark background for the footer/contact section */
-    color: #ffffff; /* White text color for contrast */
+    background-color: #333; /* Dark background */
+    color: #ffffff; /* White text color */
     text-align: center; /* Center all inline and inline-block content */
     padding: 20px; /* Add some padding */
-    border-radius: 0; /* Remove border-radius for a full-width footer look */
-    box-shadow: none; /* Remove box-shadow for a cleaner footer look */
+    border-radius: 0; /* Remove border-radius */
+    box-shadow: none; /* Remove box-shadow */
     margin: 40px 0 0 0; /* Remove margins and add space above */
-    max-width: none; /* Allow the contact section to take full width */
+    max-width: none; /* Allow full width */
 }
 
 #contact h5 {
     color: #ffffff; /* Ensure contact heading is white */
-    border-bottom-color: #ffffff; /* White underline for contact heading */
+    border-bottom-color: #ffffff; /* White underline */
 }
 
 #contact h6 {
@@ -182,7 +198,6 @@ section {
 #contact p {
      color: #ffffff; /* Ensure paragraph text is white */
 }
-
 
 #contact .profile-picture img {
     /* Keep the styles from your HTML inline if you prefer,
@@ -246,9 +261,7 @@ section {
 }
 
 
-/* General Button Styling (if not within contact section form) */
-/* Since you have a button for the resume outside the contact form,
-   let's make sure it's styled similarly */
+/* General Button Styling (for buttons outside contact form) */
 button {
     background-color: #ff6f61; /* Coral */
     color: white;
@@ -266,7 +279,7 @@ button:hover {
 }
 
 
-/* Modal Styling (from previous example, ensure it's included) */
+/* Modal Styling */
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
@@ -321,6 +334,16 @@ a:hover {
     color: #ff6f61; /* Coral on hover */
 }
 
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 20px; /* Increased padding for better spacing */
+    background-color: #333; /* Dark background for footer */
+    color: #ffffff; /* White text color */
+    margin-top: 40px; /* Add space above the footer */
+}
+
+
 /* Add some basic responsiveness */
 @media (max-width: 768px) {
     nav ul li {
@@ -365,13 +388,11 @@ a:hover {
         max-width: 100%; /* Allow form to take full width */
     }
 
-    /* The footer rule in the media query was incorrect as you don't have a footer element.
-       Removed it or commented it out if you don't plan to add one.
-       If you add a footer, uncomment and adjust as needed. */
-    /* footer {
+    /* Footer rule in the media query - kept as requested */
+    footer {
         text-align: center;
         padding: 8px;
         background-color: #333;
         color: #ffffff;
-    } */
+    }
 }
