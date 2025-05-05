@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lisa Ndlovu - Software Developer</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.CSS"> <!-- Link to your CSS file -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script>
         function toggleDescription(id) {
@@ -26,14 +26,21 @@
         // Close modal when clicking outside of it
         window.onclick = function(event) {
             const modal = document.getElementById('profile-modal');
-            if (event.target === modal) {
+            it say if (event.target === modal) {
                 closeProfileModal();
             }
         }
     </script>
 </head>
 <body>
-
+<nav>
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
 <header>
     <img src="https://raw.githubusercontent.com/LisaNdlovu/DailyHustle/main/Snapchat-1530088608.jpg" alt="Profile Picture" style="width: 100px; height: 100px; border-radius: 50%; float: left; margin-right: 20px; cursor: pointer;" onclick="openProfileModal('https://raw.githubusercontent.com/LisaNdlovu/DailyHustle/main/Snapchat-1530088608.jpg')"/>
     <h1>Lisa Ndlovu - Software Developer</h1>
@@ -41,82 +48,100 @@
 </header>
 
 <section id="about">
-    <h2>About Me</h2>
+    <h5>About Me</h5>
     <p>I am excited to share my journey in technology and software development, aiming to create impactful solutions.</p>
 </section>
 
 <section id="skills">
-    <h2>Technical Skills & Certifications</h2>
+    <h5>Technical Skills & Certifications</h5>
     <div class="skills-list">
         <div class="skill" onclick="toggleDescription('software-development')">
-            <h3>Introduction to Software Development</h3>
+            <h6>Intro to Software Development</h6>
             <p id="software-development" style="display: none;">Foundational principles of software development and programming concepts.</p>
         </div>
+        <div class="skill" onclick="toggleDescription('java')">
+            <h6>Java Programming</h6>
+            <p id="java" style="display: none;">Proficient in Java for building robust applications and software solutions.</p>
+        </div>
         <div class="skill" onclick="toggleDescription('web-development')">
-            <h3>Introduction to Web Development</h3>
+            <h6>Intro to Web Development</h6>
             <p id="web-development" style="display: none;">Learned HTML, CSS, and JavaScript for building interactive web applications.</p>
         </div>
         <div class="skill" onclick="toggleDescription('react-basics')">
-            <h3>React Basics</h3>
+            <h6>React Basics</h6>
             <p id="react-basics" style="display: none;">Understanding core concepts of React for building user interfaces.</p>
         </div>
         <div class="skill" onclick="toggleDescription('databases')">
-            <h3>Introduction to Databases for Back-End Development</h3>
+            <h6>Intro to Databases</h6>
             <p id="databases" style="display: none;">Basic knowledge of database management and back-end integration.</p>
         </div>
         <div class="skill" onclick="toggleDescription('data-capturing')">
-            <h3>Data Capturing</h3>
+            <h6>Data Service Associate</h6>
             <p id="data-capturing" style="display: none;">Expertise in data capture techniques for accurate data collection and analysis.</p>
         </div>
         <div class="skill" onclick="toggleDescription('icdl')">
-            <h3>ICDL Certification</h3>
+            <h6>ICDL Certification</h6>
             <p id="icdl" style="display: none;">Certified in Information Technology to enhance digital skills and efficiency.</p>
         </div>
     </div>
 </section>
 
 <section id="projects">
-    <h2>Projects</h2>
+    <h5>Projects</h5>
     <ul>
         <li>
-            <h3>Portfolio Creation</h3>
+            <h6>Portfolio Creation</h6>
             <p>Developed this personal portfolio website to showcase my skills and projects in software development.</p>
         </li>
         <li>
-            <h3>Car Selling Website</h3>
+            <h6>Car Selling Website</h6>
             <p>Created a web application for selling cars, featuring user authentication, car listings, and a responsive design.</p>
         </li>
     </ul>
 </section>
 
 <section id="philosophy">
-    <h2>My Philosophy & Aspirations</h2>
+    <h5>My Philosophy & Aspirations</h5>
     <p>I continuously seek to enhance my education and skill development to stay relevant and effective in the tech industry.</p>
     <p>Empowering through innovative solutions to drive impactful change.</p>
     <p>Professional growth aligns with my commitment to broaden my impact in various projects.</p>
 </section>
 
 <section id="contact">
-    <h2>Contact Me</h2>
+    <h5>Contact Me</h5>
     <div class="profile-picture" style="cursor: pointer;" onclick="openProfileModal('https://raw.githubusercontent.com/LisaNdlovu/DailyHustle/main/shared%20image.jfif')">
         <img src="https://raw.githubusercontent.com/LisaNdlovu/DailyHustle/main/shared%20image.jfif" alt="Profile Picture" style="width: 150px; height: 150px; border-radius: 50%;" />
     </div>
-    <p>Email: <a href="mailto:lisandlovu08@gmail.com">lisandlovu08@gmail.com</a></p>
-    <p>Phone: +27 636144776</p>
+    <h6>Email: <a href="mailto:lisandlovu08@gmail.com">lisandlovu08@gmail.com</a></h6>
+    <h6>Phone: +27 636144776</h6>
     <p>Resume: <button onclick="openProfileModal('https://github.com/LisaNdlovu/Profile-Portfolio/blob/main/Screenshot%202025-05-04%20155259.png?raw=true')">View Resume</button></p>
+
+    <!-- Custom Form -->
+    <div class="contact-form">
+        <div class="contact-form">
+    <h5>Get In Touch</h5>
+    <form action="https://formspree.io/f/xeoggkqv" method="POST">
+        <input type="text" name="first_name" placeholder="First Name" required>
+        <input type="text" name="last_name" placeholder="Last Name" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <textarea name="message" rows="4" placeholder="Type your message here" required></textarea>
+        <button type="submit">Submit</button>
+    </form>
+</div>
+    </div>
 </section>
 
 <section id="goals">
-    <h2>Professional Goals & Career Vision</h2>
+    <h5>Professional Goals & Career Vision</h5>
     <ul>
-        <li>Master Web Development: Develop skills in creating responsive and dynamic web applications.</li>
-        <li>Expand Technical Skills: Acquire advanced knowledge in software development frameworks and tools.</li>
-        <li>Contribute to Impactful Projects: Engage in initiatives that leverage technology for social good.</li>
+        <li><p>Master Web Development: Develop skills in creating responsive and dynamic web applications.</p></li>
+        <li><p>Expand Technical Skills: Acquire advanced knowledge in software development frameworks and tools.</p></li>
+        <li><p>Contribute to Impactful Projects: Engage in initiatives that leverage technology for social good.</p></li>
     </ul>
 </section>
 
 <section id="collaboration">
-    <h2>Why Collaborate with Me?</h2>
+    <h5>Why Collaborate with Me?</h5>
     <p>Collaboration fosters innovation. I believe in the power of teamwork to achieve great results.</p>
 </section>
 
