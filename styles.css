@@ -176,7 +176,7 @@ section {
 /* Contact Section (Styled to look like a Footer) */
 #contact {
     background-color: #333; /* Dark background */
-    color: #ffffff; /* White text color */
+    color: #ffffff#ffffff; /* White text color */
     text-align: center; /* Center all inline and inline-block content */
     padding: 20px; /* Add some padding */
     border-radius: 0; /* Remove border-radius */
@@ -186,17 +186,17 @@ section {
 }
 
 #contact h5 {
-    color: #ffffff; /* Ensure contact heading is white */
-    border-bottom-color: #ffffff; /* White underline */
+    color: #ff6f61; /* Ensure contact heading is white */
+    border-bottom-color: #ff6f61; /* White underline */
 }
 
 #contact h6 {
-    color: #ffffff; /* Ensure contact details are white */
+    color: #ff6f61; /* Ensure contact details are white */
     margin-bottom: 10px;
 }
 
 #contact p {
-     color: #ffffff; /* Ensure paragraph text is white */
+     color: #33; /* Ensure paragraph text is white */
 }
 
 #contact .profile-picture img {
