@@ -1,318 +1,124 @@
-/* Basic Reset and Body Styling */
 body {
-    font-family: 'Roboto', sans-serif; /* Use the font you linked in HTML */
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    line-height: 1.6;
-    background-color: #ffffff; /* A light background for the whole page */
-    color: #333; /* Default text color */
+    background-color: #f0f4f8; /* Soft light background */
+    color: #333; /* Dark text color for readability */
 }
 
-/* Navigation Bar */
+header {
+    background-color: #ff6f61; /* Coral */
+    color: #ffffff; /* White text color */
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+header img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+}
+
+h1 {
+    margin-top: 0;
+    font-size: 2.5em; /* Larger heading */
+}
+
+h5 {
+    font-size: 1.8em; /* Heading */
+    color: #ff6f61;
+}
+
+h6 {
+    font-size: 1em; /* Description */
+    color: #333;
+}
+
 nav {
-    background-color: #333; /* Dark background for the nav */
-    color: #fff;
-    padding: 10px 0;
+    background-color: #333; /* Dark background for nav */
+    padding: 10px;
     text-align: center;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
-    margin: 0;
 }
 
 nav ul li {
-    display: inline; /* Display list items horizontally */
+    display: inline;
     margin: 0 15px;
 }
 
-nav ul li a {
-    color: #fff;
-    text-decoration: none; /* Remove underline from links */
-    font-weight: bold;
-    transition: color 0.3s ease; /* Smooth color transition on hover */
+nav a {
+    color: #ffffff; /* White text */
+    text-decoration: none;
 }
 
-nav ul li a:hover {
-    color: #ffc107; /* Highlight color on hover */
+nav a:hover {
+    text-decoration: underline;
+    color: #ff6f61; /* Coral on hover */
 }
 
-/* Header Styling */
-header {
-    background-color: #f4f4f4; /* Light grey background */
-    padding: 40px 20px;
-    text-align: center;
-    display: flex; /* Use flexbox for layout */
-    align-items: center; /* Vertically align items */
-    justify-content: center; /* Center content horizontally */
-    flex-direction: column; /* Stack items vertically on smaller screens */
-}
-
-header img {
-    margin-bottom: 20px; /* Add space below the image */
-}
-
-header h1 {
-    margin-top: 0;
-    font-size: 2.5em;
-    color: #333;
-}
-
-header p {
-    font-size: 1.1em;
-    color: #555;
-    max-width: 800px; /* Limit paragraph width for readability */
-    margin: 0 auto; /* Center the paragraph */
-}
-
-/* Section Styling */
 section {
-    padding: 40px 20px;
-    margin: 20px auto; /* Center sections and add vertical space */
-    max-width: 900px; /* Limit section width */
-    background-color: #fff; /* White background for sections */
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-}
-
-section h5 {
-    font-size: 1.8em;
-    color: #007bff; /* A blue highlight color */
-    margin-bottom: 20px;
-    border-bottom: 2px solid #007bff; /* Underline for section titles */
-    padding-bottom: 5px;
-    display: inline-block; /* Make the underline only as wide as the text */
-}
-
-/* About Section */
-#about p {
-    font-size: 1.1em;
-    color: #555;
-}
-
-/* Skills Section */
-.skills-list {
-    display: flex;
-    flex-wrap: wrap; /* Allow skills to wrap to the next line */
-    gap: 15px; /* Space between skill boxes */
-    justify-content: center; /* Center skills horizontally */
-}
-
-.skill {
-    background-color: #e9ecef; /* Light background for skill boxes */
-    padding: 15px;
-    border-radius: 5px;
-    cursor: pointer; /* Indicate it's clickable */
-    transition: background-color 0.3s ease; /* Smooth hover effect */
-    flex: 1 1 250px; /* Flex properties for responsive layout */
-    max-width: 300px; /* Max width for a skill box */
-}
-
-.skill:hover {
-    background-color: #dee2e6;
-}
-
-.skill h6 {
-    margin-top: 0;
-    margin-bottom: 10px;
-    color: #333;
-}
-
-.skill p {
-    font-size: 0.9em;
-    color: #666;
-}
-
-/* Projects Section */
-#projects ul {
-    list-style: none;
-    padding: 0;
-}
-
-#projects li {
-    margin-bottom: 20px;
-    border-bottom: 1px dashed #ccc; /* Subtle separator between projects */
-    padding-bottom: 15px;
-}
-
-#projects h6 {
-    margin-top: 0;
-    margin-bottom: 5px;
-    color: #333;
-    font-size: 1.2em;
-}
-
-#projects p {
-    color: #555;
-}
-
-/* Philosophy Section */
-#philosophy p {
-    font-size: 1.1em;
-    color: #555;
-    margin-bottom: 15px;
-}
-
-/* Contact Section */
-#contact {
-    background-color: lightpink; /* Applied the lightpink background here */
-    /* The other styles for contact section are already in your HTML inline style,
-       but it's better to move them here for consistency. Let's add them: */
     border-radius: 10px;
     padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center; /* Center contact content */
+    background-color: #ffffff; /* White background for sections */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin-top: 20px; /* Space between sections */
 }
 
-#contact .profile-picture img {
-    margin-bottom: 15px; /* Space below the contact profile picture */
-}
-
-#contact h6 {
-    margin-bottom: 10px;
-}
-
-#contact a {
-    color: #007bff; /* Link color */
-    text-decoration: none;
-}
-
-#contact a:hover {
-    text-decoration: underline;
-}
-
-#contact button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1em;
-    transition: background-color 0.3s ease;
-}
-
-#contact button:hover {
-    background-color: #0056b3;
-}
-
-/* Contact Form Styling */
-#contact form {
+/* Form styles */
+form {
     display: flex;
-    flex-direction: column; /* Stack form elements vertically */
-    max-width: 500px; /* Limit form width */
-    margin: 20px auto 0; /* Center the form below other contact info */
+    flex-direction: column;
+    margin-top: 20px;
+    max-width: 600px; /* Max width for the form */
+    margin-left: auto;
+    margin-right: auto;
 }
 
-#contact form input[type="text"],
-#contact form input[type="email"],
-#contact form textarea {
-    margin-bottom: 15px;
+input, textarea {
     padding: 10px;
+    margin-bottom: 15px;
     border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 1em;
+    border-radius: 5px;
+    width: 100%; /* Full width */
 }
 
-#contact form textarea {
-    resize: vertical; /* Allow vertical resizing of the textarea */
-}
-
-#contact form button[type="submit"] {
-    background-color: #28a745; /* Green for submit button */
+button {
+    background-color: #ff6f61; /* Coral */
     color: white;
     border: none;
-    padding: 10px 20px;
+    padding: 10px;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 1.1em;
-    transition: background-color 0.3s ease;
+    font-size: 1em;
+    transition: box-shadow 0.3s; /* Add transition for shine effect */
 }
 
-#contact form button[type="submit"]:hover {
-    background-color: #218838;
+button:hover {
+    background-color: #f05a28; /* Darker Coral on hover */
+    box-shadow: 0 0 20px rgba(240, 111, 97, 0.7); /* Shine effect */
 }
 
-/* Modal Styling */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgba(0, 0, 0, 0.7); /* Black background with opacity */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-}
-
-.modal-content {
-    margin: auto;
-    display: block;
-    max-width: 80%;
-    max-height: 80%;
-    border-radius: 8px;
-}
-
-.close {
-    position: absolute;
-    top: 15px;
-    right: 35px;
-    color: #f1f1f1;
-    font-size: 40px;
-    font-weight: bold;
-    transition: 0.3s;
-    cursor: pointer;
-}
-
-.close:hover,
-.close:focus {
-    color: #bbb;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-/* Add some basic responsiveness */
-@media (max-width: 768px) {
-    nav ul li {
-        margin: 0 10px;
-    }
-
-    header {
-        padding: 30px 15px;
-    }
-
-    header h1 {
-        font-size: 2em;
-    }
-
-    section {
-        padding: 30px 15px;
-    }
-
-    section h5 {
-        font-size: 1.5em;
-    }
-
-    .skills-list {
-        flex-direction: column; /* Stack skills vertically on smaller screens */
-        align-items: center; /* Center stacked skills */
-    }
-
-    .skill {
-        flex: 1 1 100%; /* Make skills take full width */
-        max-width: 400px; /* Still set a max-width */
-    }
-
-    #contact form {
-        max-width: 100%; /* Allow form to take full width */
-    }
-    footer {
+footer {
     text-align: center;
-    padding: 8px
+    padding: 8px;
     background-color: #333; /* Dark background for footer */
     color: #ffffff; /* White text color */
+}
+
+a {
+    color: #6a9bd1; /* Soft Blue for links */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #ff6f61; /* Coral on hover */
 }
