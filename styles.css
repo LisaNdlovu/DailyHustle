@@ -179,11 +179,18 @@ section {
     margin-bottom: 10px;
 }
 
+#contact p {
+     color: #ffffff; /* Ensure paragraph text is white */
+}
+
+
 #contact .profile-picture img {
-    width: 150px; /* Set size from HTML inline style */
-    height: 150px; /* Set size from HTML inline style */
-    border-radius: 50%; /* Set radius from HTML inline style */
-    cursor: pointer; /* Add cursor style */
+    /* Keep the styles from your HTML inline if you prefer,
+       or define them here for better practice: */
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    cursor: pointer;
     margin-bottom: 15px; /* Space below the contact profile picture */
 }
 
@@ -218,6 +225,8 @@ section {
     border-radius: 5px;
     width: 100%; /* Full width */
     box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    background-color: #ffffff; /* Keep input backgrounds light */
+    color: #333; /* Keep input text dark */
 }
 
 #contact form button[type="submit"] {
@@ -320,7 +329,7 @@ a:hover {
 
     header {
         padding: 30px 15px;
-        padding-top: 120px; /* Adjust padding for the absolute image */
+        padding-top: 100px; /* Adjust padding for the absolute image on smaller screens */
     }
 
     header img {
@@ -356,7 +365,9 @@ a:hover {
         max-width: 100%; /* Allow form to take full width */
     }
 
-    /* Ensure the footer rule in the media query is correct if you add a footer */
+    /* The footer rule in the media query was incorrect as you don't have a footer element.
+       Removed it or commented it out if you don't plan to add one.
+       If you add a footer, uncomment and adjust as needed. */
     /* footer {
         text-align: center;
         padding: 8px;
