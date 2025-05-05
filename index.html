@@ -26,10 +26,10 @@
         // Close modal when clicking outside of it
         window.onclick = function(event) {
             const modal = document.getElementById('profile-modal');
-            it say if (event.target === modal) {
+            if (event.target === modal) {
                 closeProfileModal();
             }
-        }
+        };
     </script>
 </head>
 <body>
@@ -114,20 +114,19 @@
     </div>
     <h6>Email: <a href="mailto:lisandlovu08@gmail.com">lisandlovu08@gmail.com</a></h6>
     <h6>Phone: +27 636144776</h6>
-    <p>Resume: <button onclick="openProfileModal('https://github.com/LisaNdlovu/Profile-Portfolio/blob/main/Screenshot%202025-05-04%20155259.png?raw=true')">View Resume</button></p>
-
+    <p>Resume: <button onclick="window.open('https://github.com/LisaNdlovu/Profile-Portfolio/blob/main/Screenshot%202025-05-04%20155259.png?raw=true')">View Resume</button></p>
+</section>
+<section>
     <!-- Custom Form -->
     <div class="contact-form">
-        <div class="contact-form">
-    <h5>Get In Touch</h5>
-    <form action="https://formspree.io/f/xeoggkqv" method="POST">
-        <input type="text" name="first_name" placeholder="First Name" required>
-        <input type="text" name="last_name" placeholder="Last Name" required>
-        <input type="email" name="email" placeholder="Email" required>
-        <textarea name="message" rows="4" placeholder="Type your message here" required></textarea>
-        <button type="submit">Submit</button>
-    </form>
-</div>
+        <h5>Get In Touch</h5>
+        <form action="https://formspree.io/f/xeoggkqv" method="POST">
+            <input type="text" name="first_name" placeholder="First Name" required>
+            <input type="text" name="last_name" placeholder="Last Name" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <textarea name="message" rows="4" placeholder="Type your message here" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
     </div>
 </section>
 
