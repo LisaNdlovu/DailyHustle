@@ -16,7 +16,7 @@
         function openProfileModal(imageSrc) {
             const modalImage = document.getElementById('modal-image');
             modalImage.src = imageSrc; // Set the modal image source
-            document.getElementById('profile-modal').style.display = 'flex'; // Use flex to center the modal content
+            document.getElementById('profile-modal').style.display = 'block';
         }
 
         function closeProfileModal() {
@@ -26,7 +26,7 @@
         function openResumeModal(resumeSrc) {
             const modalResume = document.getElementById('resume-image');
             modalResume.src = resumeSrc; // Set the modal image source for resume
-            document.getElementById('resume-modal').style.display = 'flex'; // Use flex to center the modal content
+            document.getElementById('resume-modal').style.display = 'block';
         }
 
         function closeResumeModal() {
@@ -56,8 +56,7 @@
     </ul>
 </nav>
 <header>
-    <!-- Removed inline style for float and margin-right, handled by CSS -->
-    <img src="https://raw.githubusercontent.com/LisaNdlovu/DailyHustle/main/Snapchat-1530088608.jpg" alt="Profile Picture" class="header-profile-pic" onclick="openProfileModal('https://raw.githubusercontent.com/LisaNdlovu/DailyHustle/main/Snapchat-1530088608.jpg')"/>
+    <img src="https://raw.githubusercontent.com/LisaNdlovu/DailyHustle/main/Snapchat-1530088608.jpg" alt="Profile Picture" style="width: 100px; height: 100px; border-radius: 50%; float: left; margin-right: 20px; cursor: pointer;" onclick="openProfileModal('https://raw.githubusercontent.com/LisaNdlovu/DailyHustle/main/Snapchat-1530088608.jpg')"/>
     <h1>Lisa Ndlovu - Software Developer</h1>
     <p>Welcome! I am Lisa Ndlovu, passionate about software development. Ready to take on new challenges and grow my professional skills in dynamic environments.</p>
 </header>
@@ -122,11 +121,10 @@
     <p>Professional growth aligns with my commitment to broaden my impact in various projects.</p>
 </section>
 
-<!-- Removed inline style from the contact section, handled by CSS -->
-<section id="contact">
+<section id="contact" style="background-color: #f0f4f8; border-radius: 10px; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
     <h5>Contact Me</h5>
-    <div class="profile-picture" onclick="openProfileModal('https://raw.githubusercontent.com/LisaNdlovu/DailyHustle/main/shared%20image.jfif')">
-        <img src="https://raw.githubusercontent.com/LisaNdlovu/DailyHustle/main/shared%20image.jfif" alt="Profile Picture" />
+    <div class="profile-picture" style="cursor: pointer;" onclick="openProfileModal('https://raw.githubusercontent.com/LisaNdlovu/DailyHustle/main/shared%20image.jfif')">
+        <img src="https://raw.githubusercontent.com/LisaNdlovu/DailyHustle/main/shared%20image.jfif" alt="Profile Picture" style="width: 150px; height: 150px; border-radius: 50%;" />
     </div>
     <h6>Email: <a href="mailto:lisandlovu08@gmail.com">lisandlovu08@gmail.com</a></h6>
     <h6>Phone: +27 636144776</h6>
