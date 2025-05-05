@@ -55,7 +55,7 @@ nav ul li {
 }
 
 nav a {
-    color: #ffffff; /* White text */
+    color: #ff6f61; /* White text */
     text-decoration: none;
 }
 
@@ -67,7 +67,7 @@ nav a:hover {
 section {
     border-radius: 10px;
     padding: 20px;
-    background-color: #ffffff; /* White background for sections */
+    background-color: #ff6f61; /* White background for sections */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     margin-top: 20px; /* Space between sections */
 }
