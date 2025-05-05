@@ -1,3 +1,4 @@
+<style>
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -28,8 +29,40 @@ h1 {
     font-size: 2.5em; /* Larger heading */
 }
 
-h2, h3 {
-    color: #ff6f61; /* Coral for headings */
+h5 {
+    font-size: 1.8em; /* Heading */
+    color: #ff6f61;
+}
+
+h6 {
+    font-size: 1em; /* Description */
+    color: #333;
+}
+
+nav {
+    background-color: #333; /* Dark background for nav */
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav a {
+    color: #ffffff; /* White text */
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    color: #ff6f61; /* Coral on hover */
 }
 
 section {
@@ -61,7 +94,7 @@ section {
 
 footer {
     text-align: center;
-    padding: 15px;
+    padding: 8px;
     background-color: #333; /* Dark background for footer */
     color: #ffffff; /* White text color */
 }
@@ -75,3 +108,42 @@ a:hover {
     text-decoration: underline;
     color: #ff6f61; /* Coral on hover */
 }
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    max-width: 600px; /* Max width for the form */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold; /* Bold labels */
+}
+
+input, textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%; /* Full width */
+}
+
+button {
+    background-color: #ff6f61; /* Coral */
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: box-shadow 0.3s; /* Add transition for the shine effect */
+}
+
+button:hover {
+    background-color: #f05a28; /* Darker Coral on hover */
+    box-shadow: 0 0 20px rgba(240, 111, 97, 0.7); /* Shine effect */
+}
+</style>
