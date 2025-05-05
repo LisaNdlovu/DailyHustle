@@ -23,11 +23,25 @@
             document.getElementById('profile-modal').style.display = 'none';
         }
 
+        function openResumeModal(resumeSrc) {
+            const modalResume = document.getElementById('resume-image');
+            modalResume.src = resumeSrc; // Set the modal image source for resume
+            document.getElementById('resume-modal').style.display = 'block';
+        }
+
+        function closeResumeModal() {
+            document.getElementById('resume-modal').style.display = 'none';
+        }
+
         // Close modal when clicking outside of it
         window.onclick = function(event) {
-            const modal = document.getElementById('profile-modal');
-            if (event.target === modal) {
+            const profileModal = document.getElementById('profile-modal');
+            const resumeModal = document.getElementById('resume-modal');
+            if (event.target === profileModal) {
                 closeProfileModal();
+            }
+            if (event.target === resumeModal) {
+                closeResumeModal();
             }
         };
     </script>
@@ -114,10 +128,8 @@
     </div>
     <h6>Email: <a href="mailto:lisandlovu08@gmail.com">lisandlovu08@gmail.com</a></h6>
     <h6>Phone: +27 636144776</h6>
-    <p>Resume: <button onclick="window.open('https://github.com/LisaNdlovu/Profile-Portfolio/blob/main/Screenshot%202025-05-04%20155259.png?raw=true')">View Resume</button></p>
-</section>
-
-<section style="background-color: #fff; border-radius: 10px; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); margin-top: 20px;">
+    <p>Resume: <button onclick="openResumeModal('https://github.com/LisaNdlovu/Profile-Portfolio/blob/main/Screenshot%202025-05-04%20155259.png?raw=true')">View Resume</button></p>
+    
     <h5>Get In Touch</h5>
     <form action="https://formspree.io/f/xeoggkqv" method="POST">
         <input type="text" name="first_name" placeholder="First Name" required>
@@ -127,6 +139,7 @@
         <button type="submit">Submit</button>
     </form>
 </section>
+
 <section id="goals">
     <h5>Professional Goals & Career Vision</h5>
     <ul>
@@ -141,10 +154,16 @@
     <p>Collaboration fosters innovation. I believe in the power of teamwork to achieve great results.</p>
 </section>
 
-<!-- Modal Structure -->
+<!-- Profile Modal Structure -->
 <div id="profile-modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background-color:rgba(0, 0, 0, 0.8); z-index:1000;">
     <span onclick="closeProfileModal()" style="color:white; cursor:pointer; position:absolute; top:10px; right:20px;">&times;</span>
     <img id="modal-image" style="margin:auto; display:block; max-width:90%; max-height:90%; position:absolute; top:50%; left:50%; transform:translate(-50%, -50%);"/>
+</div>
+
+<!-- Resume Modal Structure -->
+<div id="resume-modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background-color:rgba(0, 0, 0, 0.8); z-index:1000;">
+    <span onclick="closeResumeModal()" style="color:white; cursor:pointer; position:absolute; top:10px; right:20px;">&times;</span>
+    <img id="resume-image" style="margin:auto; display:block; max-width:90%; max-height:90%; position:absolute; top:50%; left:50%; transform:translate(-50%, -50%);"/>
 </div>
 
 <!-- Footer -->
