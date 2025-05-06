@@ -5,6 +5,12 @@ body {
     background-color: #f0f4f8; /* Soft light background */
     color: #333; /* Dark text color for readability */
     text-align: center; /* Center align the website */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for theme change */
+}
+
+body.dark-mode {
+    background-color: #121212; /* Dark background */
+    color: #ffffff; /* Light text color */
 }
 
 header {
