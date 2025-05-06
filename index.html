@@ -8,11 +8,6 @@
     <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script>
-        function toggleDescription(id) {
-            const description = document.getElementById(id);
-            description.style.display = description.style.display === 'none' ? 'block' : 'none';
-        }
-
         function openProfileModal(imageSrc) {
             const modalImage = document.getElementById('modal-image');
             modalImage.src = imageSrc; // Set the modal image source
@@ -69,33 +64,33 @@
 <section id="skills">
     <h5>Technical Skills & Certifications</h5>
     <div class="skills-list">
-        <div class="skill" onclick="toggleDescription('software-development')">
+        <div class="skill">
             <h6>Intro to Software Development</h6>
-            <p id="software-development" style="display: none;">Foundational principles of software development and programming concepts.</p>
+            <p>Foundational principles of software development and programming concepts.</p>
         </div>
-        <div class="skill" onclick="toggleDescription('java')">
+        <div class="skill">
             <h6>Java Programming</h6>
-            <p id="java" style="display: none;">Proficient in Java for building robust applications and software solutions.</p>
+            <p>Proficient in Java for building robust applications and software solutions.</p>
         </div>
-        <div class="skill" onclick="toggleDescription('web-development')">
+        <div class="skill">
             <h6>Intro to Web Development</h6>
-            <p id="web-development" style="display: none;">Learned HTML, CSS, and JavaScript for building interactive web applications.</p>
+            <p>Learned HTML, CSS, and JavaScript for building interactive web applications.</p>
         </div>
-        <div class="skill" onclick="toggleDescription('react-basics')">
+        <div class="skill">
             <h6>React Basics</h6>
-            <p id="react-basics" style="display: none;">Understanding core concepts of React for building user interfaces.</p>
+            <p>Understanding core concepts of React for building user interfaces.</p>
         </div>
-        <div class="skill" onclick="toggleDescription('databases')">
+        <div class="skill">
             <h6>Intro to Databases</h6>
-            <p id="databases" style="display: none;">Basic knowledge of database management and back-end integration.</p>
+            <p>Basic knowledge of database management and back-end integration.</p>
         </div>
-        <div class="skill" onclick="toggleDescription('data-capturing')">
+        <div class="skill">
             <h6>Data Service Associate</h6>
-            <p id="data-capturing" style="display: none;">Expertise in data capture techniques for accurate data collection and analysis.</p>
+            <p>Expertise in data capture techniques for accurate data collection and analysis.</p>
         </div>
-        <div class="skill" onclick="toggleDescription('icdl')">
+        <div class="skill">
             <h6>ICDL Certification</h6>
-            <p id="icdl" style="display: none;">Certified in Information Technology to enhance digital skills and efficiency.</p>
+            <p>Certified in Information Technology to enhance digital skills and efficiency.</p>
         </div>
     </div>
 </section>
@@ -104,11 +99,15 @@
     <h5>Projects</h5>
     <ul>
         <li>
-            <h6>Portfolio Creation</h6>
+            <h6><a href="https://github.com/LisaNdlovu/DailyHustle" target="_blank">DailyHustle</a></h6>
+            <p>A platform designed to help users manage their daily tasks and projects efficiently.</p>
+        </li>
+        <li>
+            <h6><a href="https://github.com/LisaNdlovu/Portfolio" target="_blank">Portfolio Creation</a></h6>
             <p>Developed this personal portfolio website to showcase my skills and projects in software development.</p>
         </li>
         <li>
-            <h6>Car Selling Website</h6>
+            <h6><a href="https://puleng064.github.io/ecommerce-site/" target="_blank">Car Selling Website</a></h6>
             <p>Created a web application for selling cars, featuring user authentication, car listings, and a responsive design.</p>
         </li>
     </ul>
