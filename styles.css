@@ -131,3 +131,21 @@ a:hover {
     text-decoration: underline;
     color: #ff6f61; /* Coral on hover */
 }
+
+/* Dark mode styles */
+body.dark-mode header {
+    background-color: #1f1f1f; /* Dark header */
+}
+
+body.dark-mode section {
+    background-color: #2b2b2b; /* Dark section background */
+    color: #ffffff; /* Light text for sections */
+}
+
+body.dark-mode nav {
+    background-color: #444; /* Darker nav */
+}
+
+body.dark-mode footer {
+    background-color: #444; /* Dark footer */
+}
