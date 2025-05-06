@@ -10,7 +10,7 @@ body {
 
 body.dark-mode {
     background-color: #121212; /* Dark background */
-    color: #ffffff; /* Light text color */
+    color: #e0e0e0; /* Light text color for dark mode */
 }
 
 header {
@@ -40,7 +40,7 @@ h5 {
 
 h6 {
     font-size: 1em; /* Description */
-    color: #333;
+    color: #555; /* Dark gray for better contrast */
 }
 
 nav {
@@ -74,6 +74,7 @@ section {
     background-color: #ffffff; /* White background for sections */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     margin-top: 20px; /* Space between sections */
+    color: #333; /* Dark text in light mode */
 }
 
 /* Specific styles for Contact and Get In Touch sections */
