@@ -11,8 +11,9 @@
         function toggleTheme() {
             const body = document.body;
             body.classList.toggle("dark-mode");
-            const themeButton = document.getElementById("theme-toggle");
-            themeButton.textContent = body.classList.contains("dark-mode") ? "Switch to Light Mode" : "Switch to Dark Mode";
+            const themeIcon = document.getElementById("theme-icon");
+            themeIcon.classList.toggle("fa-sun");
+            themeIcon.classList.toggle("fa-moon");
         }
 
         function openProfileModal(imageSrc) {
@@ -55,7 +56,11 @@
         <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
-        <li><button id="theme-toggle" onclick="toggleTheme()">Switch to Dark Mode</button></li>
+        <li>
+            <button id="theme-toggle" onclick="toggleTheme()">
+                <i id="theme-icon" class="fas fa-moon"></i>
+            </button>
+        </li>
     </ul>
 </nav>
 <header>
