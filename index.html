@@ -8,6 +8,13 @@
     <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script>
+        function toggleTheme() {
+            const body = document.body;
+            body.classList.toggle("dark-mode");
+            const themeButton = document.getElementById("theme-toggle");
+            themeButton.textContent = body.classList.contains("dark-mode") ? "Switch to Light Mode" : "Switch to Dark Mode";
+        }
+
         function openProfileModal(imageSrc) {
             const modalImage = document.getElementById('modal-image');
             modalImage.src = imageSrc; // Set the modal image source
@@ -48,6 +55,7 @@
         <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
+        <li><button id="theme-toggle" onclick="toggleTheme()">Switch to Dark Mode</button></li>
     </ul>
 </nav>
 <header>
@@ -103,7 +111,7 @@
             <p>A platform designed to help users manage their daily tasks and projects efficiently.</p>
         </li>
         <li>
-            <h6><a href="https://lisandlovu.github.io?Profile-Portfolio/" target="_blank">Portfolio Creation</a></h6>
+            <h6><a href="https://github.com/LisaNdlovu/Portfolio" target="_blank">Portfolio Creation</a></h6>
             <p>Developed this personal portfolio website to showcase my skills and projects in software development.</p>
         </li>
         <li>
