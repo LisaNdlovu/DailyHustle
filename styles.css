@@ -77,6 +77,28 @@ section {
     color: #333; /* Dark text in light mode */
 }
 
+/* Skills Card Styles */
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.skill-card {
+    background-color: #f0f4f8; /* Light background for cards */
+    border: 1px solid #ccc; /* Subtle border */
+    border-radius: 10px; /* Rounded corners */
+    padding: 15px;
+    margin: 10px;
+    width: 200px; /* Fixed width for cards */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    transition: transform 0.3s; /* Animation for hover effect */
+}
+
+.skill-card:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
 /* Specific styles for Contact and Get In Touch sections */
 #contact {
     background-color: #f7c6c7; /* Light Pink */
