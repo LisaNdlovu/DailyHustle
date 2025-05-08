@@ -88,7 +88,14 @@
 </section>
 
 <section id="skills">
-    <h5>Technical Skills & Certifications</h5>
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+        <h5>Technical Skills & Certifications</h5>
+        <div>
+            <label for="font-color-picker" style="margin-right: 8px;">Select Font Color:</label>
+            <input type="color" id="font-color-picker" value="#ff6f61">
+            <button onclick="changeFontColor()">Apply Color</button>
+        </div>
+    </div>
     <div class="skills-list">
         <div class="skill-card">
             <h6>Intro to Software Development</h6>
@@ -118,11 +125,6 @@
             <h6>ICDL Certification</h6>
             <p>Certified in Information Technology to enhance digital skills and efficiency.</p>
         </div>
-    </div>
-    <div style="margin-top: 8px;">
-        <label for="font-color-picker">Select Font Color: </label>
-        <input type="color" id="font-color-picker" value="#ff6f61">
-        <button onclick="changeFontColor()">Apply Color</button>
     </div>
 </section>
 
