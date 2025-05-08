@@ -36,9 +36,20 @@
             document.getElementById('resume-modal').style.display = 'none';
         }
 
-        function changeBackgroundTheme() {
-            const selectedTheme = document.getElementById('theme-selector').value;
-            document.body.className = selectedTheme;
+        function applyCustomColor() {
+            const customColor = document.getElementById('custom-color-picker').value;
+            if (document.body.classList.contains('dark-mode')) {
+                const skillCards = document.querySelectorAll('.skill-card h6, .skill-card p');
+                const projectCards = document.querySelectorAll('.project-card h6, .project-card p');
+                
+                skillCards.forEach(card => {
+                    card.style.color = customColor;
+                });
+                
+                projectCards.forEach(card => {
+                    card.style.color = customColor;
+                });
+            }
         }
 
         window.onclick = function(event) {
@@ -83,13 +94,9 @@
     <div style="display: flex; justify-content: space-between; align-items: center;">
         <h5>Technical Skills & Certifications</h5>
         <div>
-            <label for="theme-selector" style="margin-right: 8px;">Select Background Theme:</label>
-            <select id="theme-selector" onchange="changeBackgroundTheme()">
-                <option value="">Default</option>
-                <option value="theme-light">Light</option>
-                <option value="theme-dark">Dark</option>
-                <option value="theme-colorful">Colorful</option>
-            </select>
+            <label for="custom-color-picker" style="margin-right: 8px;">Custom Color:</label>
+            <input type="color" id="custom-color-picker" value="#ff6f61">
+            <button onclick="applyCustomColor()">Apply Color</button>
         </div>
     </div>
     <div class="skills-list">
