@@ -122,15 +122,9 @@ section {
 }
 
 /* Dark mode styles for custom color */
-body.dark-mode .skill-card h6,
-body.dark-mode .skill-card p,
-body.dark-mode .project-card h6,
-body.dark-mode .project-card p {
+body.dark-mode .skill-card,
+body.dark-mode .project-card {
     color: #e0e0e0; /* Default light text color in dark mode */
-}
-
-body.dark-mode .custom-color {
-    color: inherit; /* Inherit custom color when applied */
 }
 
 /* Adjusted text color for better visibility in dark mode */
