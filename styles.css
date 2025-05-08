@@ -211,8 +211,6 @@ body.dark-mode footer {
 }
 
 /* Adjusted text color for better visibility in dark mode */
-body.dark-mode .project-card p,
-body.dark-mode .skill-card p,
 body.dark-mode #contact h5,
 body.dark-mode #contact h6,
 body.dark-mode #contact p,
