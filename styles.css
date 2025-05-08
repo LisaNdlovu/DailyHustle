@@ -99,6 +99,28 @@ section {
     transform: scale(1.05); /* Slightly enlarge on hover */
 }
 
+/* Projects Card Styles */
+.project-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.project-card {
+    background-color: #e0f7fa; /* Light cyan background for project cards */
+    border: 1px solid #ccc; /* Subtle border */
+    border-radius: 10px; /* Rounded corners */
+    padding: 15px;
+    margin: 10px;
+    width: 250px; /* Fixed width for project cards */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    transition: transform 0.3s; /* Animation for hover effect */
+}
+
+.project-card:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
 /* Specific styles for Contact and Get In Touch sections */
 #contact {
     background-color: #f7c6c7; /* Light Pink */
