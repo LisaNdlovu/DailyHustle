@@ -126,8 +126,7 @@ body.dark-mode .project-card p,
 body.dark-mode .skill-card p,
 body.dark-mode #contact h5,
 body.dark-mode #contact h6,
-body.dark-mode #contact p,
-body.dark-mode #skills h5 {
+body.dark-mode #contact p, {
     color: #000; /* Black text for better visibility */
 }
 
