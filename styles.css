@@ -98,6 +98,20 @@ section {
 .skill-card:hover {
     transform: scale(1.05); /* Slightly enlarge on hover */
 }
+.theme-light {
+    background-color: #f0f4f8; /* Light background */
+    color: #333; /* Dark text */
+}
+
+.theme-dark {
+    background-color: #121212; /* Dark background */
+    color: #e0e0e0; /* Light text */
+}
+
+.theme-colorful {
+    background-color: #ffcccb; /* Light pink background */
+    color: #333; /* Dark text */
+}
 
 /* Projects Card Styles */
 .project-list {
