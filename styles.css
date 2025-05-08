@@ -214,5 +214,5 @@ body.dark-mode h1,
 body.dark-mode h5,
 body.dark-mode h6,
 body.dark-mode p {
-    color: #e0e0e0; /* Lighter text color for better contrast */
+    color: #ff6f61; /* Lighter text color for better contrast */
 }
