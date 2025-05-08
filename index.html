@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lisa Ndlovu - Software Developer</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script>
         function toggleTheme() {
@@ -18,7 +18,7 @@
 
         function openProfileModal(imageSrc) {
             const modalImage = document.getElementById('modal-image');
-            modalImage.src = imageSrc;
+            modalImage.src = imageSrc; // Set the modal image source
             document.getElementById('profile-modal').style.display = 'block';
         }
 
@@ -28,7 +28,7 @@
 
         function openResumeModal(resumeSrc) {
             const modalResume = document.getElementById('resume-image');
-            modalResume.src = resumeSrc;
+            modalResume.src = resumeSrc; // Set the modal image source for resume
             document.getElementById('resume-modal').style.display = 'block';
         }
 
@@ -36,21 +36,7 @@
             document.getElementById('resume-modal').style.display = 'none';
         }
 
-        function applyCustomColor() {
-            const customColor = document.getElementById('custom-color-picker').value;
-            const skillCards = document.querySelectorAll('.skill-card');
-            const projectCards = document.querySelectorAll('.project-card');
-
-            if (document.body.classList.contains('dark-mode')) {
-                skillCards.forEach(card => {
-                    card.style.backgroundColor = customColor;
-                });
-                projectCards.forEach(card => {
-                    card.style.backgroundColor = customColor;
-                });
-            }
-        }
-
+        // Close modal when clicking outside of it
         window.onclick = function(event) {
             const profileModal = document.getElementById('profile-modal');
             const resumeModal = document.getElementById('resume-modal');
@@ -90,14 +76,7 @@
 </section>
 
 <section id="skills">
-    <div style="display: flex; justify-content: space-between; align-items: center;">
-        <h5>Technical Skills & Certifications</h5>
-        <div>
-            <label for="custom-color-picker" style="margin-right: 8px;">Custom Color:</label>
-            <input type="color" id="custom-color-picker" value="#ff6f61">
-            <button onclick="applyCustomColor()">Apply Color</button>
-        </div>
-    </div>
+    <h5>Technical Skills & Certifications</h5>
     <div class="skills-list">
         <div class="skill-card">
             <h6>Intro to Software Development</h6>
