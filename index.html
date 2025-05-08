@@ -38,16 +38,15 @@
 
         function applyCustomColor() {
             const customColor = document.getElementById('custom-color-picker').value;
+            const skillCards = document.querySelectorAll('.skill-card');
+            const projectCards = document.querySelectorAll('.project-card');
+
             if (document.body.classList.contains('dark-mode')) {
-                const skillCards = document.querySelectorAll('.skill-card h6, .skill-card p');
-                const projectCards = document.querySelectorAll('.project-card h6, .project-card p');
-                
                 skillCards.forEach(card => {
-                    card.style.color = customColor;
+                    card.style.backgroundColor = customColor;
                 });
-                
                 projectCards.forEach(card => {
-                    card.style.color = customColor;
+                    card.style.backgroundColor = customColor;
                 });
             }
         }
@@ -73,6 +72,8 @@
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
         <li>
+            <button id="theme-toggle" onclick="toggleTheme()">
+                <i id="theme-icon" class="fas fa-moon"></i>
             </button>
         </li>
     </ul>
@@ -92,8 +93,8 @@
     <div style="display: flex; justify-content: space-between; align-items: center;">
         <h5>Technical Skills & Certifications</h5>
         <div>
-           <button id="color-picker" aria-label="Choose color" title="Pick a color">
-                        <i class="fas fa-palette"></
+            <label for="custom-color-picker" style="margin-right: 8px;">Custom Color:</label>
+            <input type="color" id="custom-color-picker" value="#ff6f61">
             <button onclick="applyCustomColor()">Apply Color</button>
         </div>
     </div>
