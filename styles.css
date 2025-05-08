@@ -107,7 +107,7 @@ section {
 }
 
 .project-card {
-    background-color: #e0f7fa; /* Light cyan background for project cards */
+    background-color: #f7c6c7; /* Light cyan background for project cards */
     border: 1px solid #ccc; /* Subtle border */
     border-radius: 10px; /* Rounded corners */
     padding: 15px;
@@ -119,6 +119,12 @@ section {
 
 .project-card:hover {
     transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Adjust text color for descriptions in dark mode */
+body.dark-mode .project-card p,
+body.dark-mode .skill-card p {
+    color: #000; /* Black text for better visibility */
 }
 
 /* Specific styles for Contact and Get In Touch sections */
