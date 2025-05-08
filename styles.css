@@ -131,6 +131,11 @@ body.dark-mode #skills h5 {
     color: #000; /* Black text for better visibility */
 }
 
+/* Skills titles in dark mode */
+body.dark-mode .skill-card h6 {
+    color: #000; /* Black text for skill titles */
+}
+
 /* Specific styles for Contact and Get In Touch sections */
 #contact {
     background-color: #f7c6c7; /* Light Pink */
